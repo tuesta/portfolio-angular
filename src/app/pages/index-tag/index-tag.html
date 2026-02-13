@@ -8,16 +8,23 @@
     </a>
 
     <nav class="main-nav">
-        <a href="https://github.com/tuesta" target="_blank" rel="noopener noreferrer">Perfil</a>
+        <a href="https://github.com/tuesta" target="_blank" rel="noopener noreferrer">
+            @if (lang() === 'es') {
+                Perfil
+            } @else {
+                Profile
+            }
+        </a>
     </nav>
 
+    <app-language-toggle />
     <app-theme-toggle />
 </header>
 
 <main class="content">
     <app-nav-filters
         [tags]="allTags()"
-        defaultTag="Todos"
+        [defaultTag]="defaultTag()"
     />
 
     <div class="post-list">

@@ -1,0 +1,18 @@
+blockquote {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin: 1.5rem 0;
+  padding-left: 1.25rem;
+  border-left: 1px dotted rgba(var(--text-color));
+  color: var(--text-color);
+  font-style: italic;
+}
+
+blockquote p {
+  margin: 0 0 0.75rem 0;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}

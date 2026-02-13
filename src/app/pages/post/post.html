@@ -9,7 +9,10 @@
         </a>
     </nav>
 
-    <app-theme-toggle />
+    <div class="left">
+        <app-language-toggle />
+        <app-theme-toggle />
+    </div>
 </header>
 
 <main class="post-main">
@@ -28,6 +31,11 @@
             </div>
         </header>
 
-        <div class="post-content" app-post-content ></div>
+        @if (lang() === "es") {
+            <div class="post-content" app-post-content ></div>
+        } @else {
+            <div class="post-content" app-post-content-en ></div>
+        }
+
     </article>
 </main>

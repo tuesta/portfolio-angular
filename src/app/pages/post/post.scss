@@ -14,10 +14,20 @@
 }
 
 .post-header {
-  ::ng-deep button {
+  .left {
     position: absolute;
     right: .5rem;
     top: 1.5rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  }
+
+  .left button {
+    box-sizing: border-box;
+  }
+
+  .left a {
     box-sizing: border-box;
   }
 }

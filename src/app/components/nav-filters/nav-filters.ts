@@ -9,7 +9,7 @@ import { toUrl } from '../../core/utils/url';
   styleUrl: './nav-filters.scss',
 })
 export class NavFilters {
-  tags = input.required<string[]>();
+  tags = input.required<[string, string][]>();
   defaultTag = input<string | null>(null);
 
   protected readonly toUrl = toUrl;

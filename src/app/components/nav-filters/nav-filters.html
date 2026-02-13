@@ -10,8 +10,8 @@
 
   @for (tag of tags(); track tag) {
      <a class="tag"
-        [routerLink]="['/tag', toUrl(tag)]"
+        [routerLink]="['/tag', tag[1]]"
         routerLinkActive="active"
-     >{{tag}}</a>
+     >{{tag[0]}}</a>
   }
 </nav>
