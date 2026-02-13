@@ -15,9 +15,12 @@ La arquitectura del proyecto está diseñada para ser modular y escalable, separ
 - =src/app/components=: Contiene componentes reutilizables y de presentación (Dumb Components).
   - =nav-filters=: Muestra las etiquetas de filtrado. Es un componente reutilizable que recibe los datos a mostrar.
   - =theme-toggle=: Botón para cambiar entre el tema claro y oscuro.
-  - =post-content=: Renderiza el contenido de un artículo.
+  - =language-toggle=: Botón para cambiar entre español e inglés.
+  - =post-content=: Renderiza el contenido de un artículo en español.
+  - =post-content-en=: Renderiza el contenido de un artículo en inglés.
 - =src/app/core=: Contiene la lógica de negocio, servicios y datos transversales a toda la aplicación.
   - =services/theme.ts=: Servicio para la gestión del tema visual de la aplicación.
+  - =services/language.ts=: Servicio para la gestión del idioma de la aplicación.
   - =constants/posts.data.ts=: "Base de datos" estática de los artículos del blog.
 - =src/app/pages=: Contiene los componentes inteligentes (Smart Components) que actúan como páginas principales.
   - =index-tag=: Página que muestra la lista de artículos, ya sea completa o filtrada por una etiqueta.
@@ -41,13 +44,16 @@ La aplicación permite una navegación fluida y un descubrimiento de contenido i
   - Utiliza =RouterLink= y =RouterLinkActive= para generar los enlaces y resaltar la etiqueta activa, delegando completamente el estado de la aplicación al enrutador de Angular.
 - *Página de Índice (=IndexTag=)*: Esta página inteligente obtiene la etiqueta de la URL (o ninguna, si es la página principal) y filtra los datos de =POSTS_DATA= para mostrar solo los artículos correspondientes.
 
-*** 4.3. Soporte Multi-idioma (Próximamente)
-La aplicación está diseñada para ser fácilmente extensible y soportar múltiples idiomas, mejorando su alcance y accesibilidad.
-- *Arquitectura i18n*: Se integrará un sistema de internacionalización (i18n) que permitirá la traducción de toda la interfaz estática y el contenido dinámico.
-  1. *Archivos de Traducción*: La estructura contendrá archivos de recursos (ej. JSON) para cada idioma soportado (Español, Inglés, etc.), donde se almacenarán las cadenas de texto.
-  2. *Servicio de Idioma*: Un servicio central gestionará el idioma actual, permitiendo cambiarlo dinámicamente en toda la aplicación.
-  3. *Persistencia de Preferencia*: Al igual que con el tema, la preferencia de idioma del usuario se guardará en `localStorage` para mantener la consistencia entre sesiones.
-  4. *Pipe de Traducción*: Se utilizará un pipe en las plantillas HTML para mostrar el texto en el idioma seleccionado, asegurando una actualización automática y reactiva de la interfaz.
+*** 4.3. Soporte Multi-idioma
+La aplicación ha sido actualizada para ofrecer una experiencia multi-idioma, permitiendo a los usuarios cambiar entre español e inglés.
+- *Servicio de Idioma (`LanguageService`)*: Ubicado en `src/app/core/services/language.ts`, este servicio gestiona el idioma de la aplicación.
+  1. *Detección de Idioma del Navegador*: Al iniciar la aplicación, el servicio detecta el idioma preferido del navegador del usuario.
+  2. *Persistencia*: La selección de idioma del usuario se almacena en `localStorage` para mantener la preferencia en futuras visitas.
+  3. *Cambio Dinámico*: A través de un componente de palanca (`LanguageToggleComponent`), el usuario puede cambiar el idioma en cualquier momento. El estado del idioma se gestiona con una `signal` de Angular, que permite una actualización reactiva de la interfaz.
+- *Contenido Traducido*: El contenido de los artículos se ha duplicado y traducido.
+  - `post-content`: Muestra el contenido en español.
+  - `post-content-en`: Muestra el contenido en inglés.
+  - La página `post` renderiza dinámicamente uno de los dos componentes anteriores según el idioma seleccionado.
 
 ** 5. Justificación de Decisiones de Diseño
 El diseño actual se desvía de una estructura de portfolio tradicional ("Home", "Portfolio", "Contacto") para adoptar un enfoque más simple y centrado en el contenido, similar a un blog técnico.
