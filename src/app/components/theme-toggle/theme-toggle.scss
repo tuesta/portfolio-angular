@@ -1,0 +1,11 @@
+:host {display: contents;}
+
+.theme-toggle:has(.theme-disabled) {
+    cursor: not-allowed;
+    opacity: 0.1;
+}
+.theme-disabled {
+}
+.theme-toggle:has(.theme-disabled):hover {transform: none;}
+
+.theme-toggle:active {transform: none;}

@@ -1,0 +1,17 @@
+<nav class="nav-filters" aria-label="Filtrar artículos por etiqueta">
+  @if (defaultTag()) {
+    <a class="tag"
+       routerLink="/"
+       routerLinkActive="active"
+       [routerLinkActiveOptions]="{ exact: true }">
+      {{ defaultTag() }}
+    </a>
+  }
+
+  @for (tag of tags(); track tag) {
+     <a class="tag"
+        [routerLink]="['/tag', toUrl(tag)]"
+        routerLinkActive="active"
+     >{{tag}}</a>
+  }
+</nav>

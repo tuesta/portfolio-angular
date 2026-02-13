@@ -1,0 +1,67 @@
+:host {display: contents;}
+
+.post-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.post-header nav {
+  position: absolute;
+  left: .5rem;
+  top: 1.5rem;
+}
+
+.post-header {
+  ::ng-deep button {
+    position: absolute;
+    right: .5rem;
+    top: 1.5rem;
+    box-sizing: border-box;
+  }
+}
+
+.post-main {
+  max-width: 800px;
+  margin: 3.5rem 1rem;
+  margin-bottom: 4rem;
+}
+
+.post-main .subtitle {
+  text-align: center;
+  font-size: 1.125rem;
+  font-style: italic;
+  margin: 0.5rem 0 1.25rem 0;
+  font-family: var(--font-serif);
+}
+
+.post-main h1 {
+  margin-bottom: 0;
+}
+
+.post-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.post-meta p { margin: 0;}
+
+.author {
+  font-weight: 600;
+}
+
+.post-meta time {
+  color: rgba(var(--text-color), 0.75);
+}
+
+
+@media (min-width: 1024px) {
+    .post-header {
+        position: fixed;
+    }
+}

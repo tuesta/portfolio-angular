@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Tuesta</title>
+  <subtitle>Abstracción, composición, profundidad.</subtitle>
+  <link href="https://tuesta.me/atom.xml" rel="self" />
+  <link href="https://tuesta.me" />
+  <updated>2026-03-12T00:00:00Z</updated>
+  <author>
+    <name>Tuesta</name>
+    <email>tuesta@proton.me</email>
+  </author>
+  <id>https://tuesta.me/</id>
+  <icon>https://tuesta.me/images/favicon.png</icon>
+  <rights>Tecnología 2025-2026 Tuesta</rights>
+
+  <entry>
+    <title>La semántica del silencio en el diseño de software</title>
+    <link href="https://tuesta.me/posts/la-semantica-del-silencio-en-el-diseno-de-software.html" />
+    <id>https://tuesta.me/posts/la-semantica-del-silencio-en-el-diseno-de-software.html</id>
+    <updated>2026-03-12T00:00:00Z</updated>
+    <summary>Lo que los lenguajes no dicen define lo que podemos crear. Un análisis sobre la potencia de lo implícito y la arquitectura de lo ausente.</summary>
+    <content type="html">
+      <![CDATA[
+        <p>A menudo juzgamos un lenguaje por su sintaxis, por lo que nos permite escribir. Pero su verdadera potencia reside en lo que nos prohíbe expresar.</p>
+        <h2 id="el-vacio-constructor">El vacío constructor</h2>
+        <p>En el diseño de software, el silencio no es ausencia, es estructura. Cuando un sistema de tipos nos impide representar un estado inválido, ese "silencio" es el que otorga seguridad a nuestra arquitectura.</p>
+        <blockquote>
+          <p>La arquitectura es el arte de organizar el vacío.<br />— Anon</p>
+        </blockquote>
+        <p>Programar es, en esencia, delimitar. Si el lenguaje es infinitamente permisivo, la mente se dispersa. La verdadera libertad creativa surge cuando las reglas del juego son tan estrictas que solo queda el camino de la elegancia.</p>
+      ]]>
+    </content>
+  </entry>
+
+  <entry>
+    <title>Inmutabilidad: El ancla en el caos del estado compartido</title>
+    <link href="https://tuesta.me/posts/inmutabilidad-el-ancla-en-el-caos-del-estado-compartido.html" />
+    <id>https://tuesta.me/posts/inmutabilidad-el-ancla-en-el-caos-del-estado-compartido.html</id>
+    <updated>2026-03-01T00:00:00Z</updated>
+    <summary>Lecciones de programación funcional para sistemas robustos. Por qué el cambio es la raíz de toda incertidumbre técnica.</summary>
+    <content type="html">
+      <![CDATA[
+        <p>El estado mutable es la promesa rota de la computación moderna. Creemos que podemos controlar el cambio, pero el cambio siempre termina controlándonos a nosotros.</p>
+        <h2 id="la-estetica-del-dato-eterno">La estética del dato eterno</h2>
+        <p>Un valor que cambia es un valor en el que no se puede confiar. En este artículo exploro cómo la inmutabilidad transforma el debugging de una cacería de fantasmas a una simple verificación de identidades lógicas.</p>
+        <ul>
+          <li><strong>Predicibilidad:</strong> Si un valor no cambia, el tiempo deja de ser un factor de error.</li>
+          <li><strong>Simplicidad:</strong> Menos piezas móviles significan menos puntos de fricción mental.</li>
+        </ul>
+      ]]>
+    </content>
+  </entry>
+
+  <entry>
+    <title>Arquitectura funcional: El fin de los efectos secundarios</title>
+    <link href="https://tuesta.me/posts/arquitectura-funcional-el-fin-de-los-efectos-secundarios.html" />
+    <id>https://tuesta.me/posts/arquitectura-funcional-el-fin-de-los-efectos-secundarios.html</id>
+    <updated>2026-02-24T00:00:00Z</updated>
+    <summary>Cómo la pureza transforma la mantenibilidad del software. Hacia una ingeniería de la honestidad.</summary>
+    <content type="html">
+      <![CDATA[
+        <p>Llamamos "efecto secundario" a lo que en realidad es una falta de honestidad en nuestras funciones. Si una función dice que devuelve un entero pero además borra una base de datos, esa función miente.</p>
+        <h2 id="la-pureza-como-disciplina">La pureza como disciplina</h2>
+        <p>La arquitectura funcional no busca eliminar la interacción con el mundo (IO), sino confinarla. Aislar la impureza para que el núcleo de nuestro razonamiento permanezca intacto, testable y, sobre todo, comprensible para el ser humano.</p>
+      ]]>
+    </content>
+  </entry>
+
+  <entry>
+    <title>La tiranía de la libertad</title>
+    <link href="https://tuesta.me/posts/la-tirania-de-la-libertad.html" />
+    <id>https://tuesta.me/posts/la-tirania-de-la-libertad.html</id>
+    <updated>2025-11-08T00:00:00Z</updated>
+    <summary>Detesto esa «libertad» que elimina la idea de límite. Sin restricciones, el razonamiento colapsa. Elige tu lenguaje. Delimita tu mundo.</summary>
+    <content type="html">
+      <![CDATA[
+        <blockquote><p>Los límites de mi lenguaje son los límites de mi mundo.<br />— Ludwig Wittgenstein</p></blockquote>
+        <h2 id="el-descontento-fundacional">El descontento fundacional</h2>
+        <p>Detesto el status quo de la programación. Detesto la ambigüedad elevada a virtud. Detesto la rendición disfrazada de pragmatismo.</p>
+        <p>Frente a esta degradación, es necesario rebelarse: reinterpretar la realidad, despojarla de su complejidad y someterla al imperio de la razón.</p>
+      ]]>
+    </content>
+  </entry>
+</feed>
