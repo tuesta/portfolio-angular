@@ -1,5 +1,7 @@
 * Proyecto Angular: Portfolio Profesional con Arquitectura Moderna
 
+[[https://github.com/tuesta/portfolio-angular/blob/master/Angular_Portfolio.pdf][Angular_Portfolio.pdf]]
+
 ** 1. Objetivo General
 Este proyecto transforma un portfolio profesional en una Single-Page Application (SPA) dinámica utilizando Angular. El objetivo es construir una solución robusta, escalable y mantenible, aplicando principios avanzados de componentización, enrutamiento, gestión de estado y buenas prácticas de desarrollo con TypeScript.
 
